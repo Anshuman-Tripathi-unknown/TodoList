@@ -24,7 +24,7 @@ app.listen(process.env.PORT || 3000, function () {
   console.log("server started at 3000");
 });
 const item1 = new Item({
-  name: "EXample1",
+  name: "Example1",
 });
 const item2 = new Item({
   name: "hit + to add more",
