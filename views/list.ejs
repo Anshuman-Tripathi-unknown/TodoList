@@ -1,0 +1,32 @@
+<%- include("header") -%>
+<div class="box" id="heading">
+  <h1><%= parameter %></h1>
+</div>
+<div class="box">
+  <% newli.forEach(function(yo){%>
+  <form action="/delete" method="post">
+    <div class="item">
+      <input
+        type="checkbox"
+        value=<%=yo.id%>
+        name="check"
+        onchange="this.form.submit()"
+      />
+      <p><%=yo.name%></p>
+    </div>
+    <input type="hidden" name="title" value="<%=parameter%>"></input>
+  </form>
+  <%})%>
+  <div class="item">
+    <form class="something" action="/" method="post">
+      <input
+        type="text"
+        name="newli"
+        placeholder="New Item"
+        autocomplete="off"
+      />
+      <button type="submit" name="button" value=<%=parameter%>>+</button>
+    </form>
+  </div>
+</div>
+<%- include("footer") -%>
