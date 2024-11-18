@@ -7,7 +7,7 @@ const _ =require("lodash");
 const date = require(__dirname + "/date.js");
 const day = date.day();
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect("mongodb+srv://Anshuman:aqhuXUB5jCe_-8M@cluster0.5baw5.mongodb.net/todolistDB");
 const itemschema = {
   name: String,
 };
